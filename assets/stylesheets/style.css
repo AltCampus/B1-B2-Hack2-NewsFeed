@@ -71,10 +71,16 @@ table {
 	float: left;
 	background-color: lightblue;
 	padding: 2.5em;
-	height: 84vh;
+	height: calc(100vh - 99px);
 }
-.heading, .description
-{
+
+.rightside{
+	background-color: #4286f4;
+	height: calc(100vh - 99px);
+	overflow: auto;
+}
+
+.heading, .description{
 	width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -82,10 +88,6 @@ table {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-.rightside{
-	background-color: #4286f4;
 }
 
 .newsbox{
@@ -150,7 +152,18 @@ footer {
 
 .feed
 {
-	font-size: 40px;
+	font-size: 30px;
 	padding: 30px;
+}
 
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+} 
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
