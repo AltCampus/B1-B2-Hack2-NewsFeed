@@ -84,5 +84,8 @@ main{
 	width: 100%;
 	background: blue;
 	color: white;
-	padding: 5px ;
+	padding: 10px ;
 }
+.layout{
+	top: 80px;
+	padding: 5px ;
