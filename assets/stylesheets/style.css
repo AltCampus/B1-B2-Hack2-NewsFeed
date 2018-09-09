@@ -85,7 +85,7 @@ table {
 	float: left;
 	background-color: lightblue;
 	padding: 2.5em;
-
+	height: 84vh;
 }
 
 .rightside{
@@ -105,7 +105,7 @@ table {
 
 img {
 	width: 100%;
-	height: 100px;
+	height: 95px;
 	text-align: center;
 }
 
@@ -119,7 +119,8 @@ img {
 
 .layout{
     position: relative;
-	top: 75px;
+	/*top: 75px;*/
+	bottom: 5px;
 
 }
 label {
