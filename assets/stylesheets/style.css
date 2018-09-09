@@ -1,4 +1,17 @@
-
+#heading {
+    width: 78%;
+    margin: 0px 0px 10px 0px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    background: black;
+}
+.foot {
+    padding: 30px 0px 20px 20px;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,22 +60,36 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+*,
+*.before,
+*.after{
+	margin: 0px;
+	padding: 0px;
+}
 
 /*----------------------------------------------------------------------reset complet---------------------------------------------------------*/
-.layout .leftside,.layout .rightside{
+.layout .leftside{
   	box-sizing: border-box;
 	display: inline-block;
-	width: 50%;
+	width: 40%;
+
 }
+.layout .rightside{
+	box-sizing: border-box;
+	display: inline-block;
+	width: 60%;
+	}
 
 .leftside{
 	/*display: inline-block;*/
+	float: left;
 	background-color: lightblue;
+	padding: 2.5em;
+
 }
 
 .rightside{
 	background-color: lightgreen;
-	float: right;
 }
 
 .newsbox{
@@ -82,15 +109,20 @@ img {
 	text-align: center;
 }
 
-
 .button {
 	width: 100%;
 	background: blue;
 	color: white;
-	padding: 10px ;
-}
-.layout{
-	position: relative;
-	top: 75px;
 	padding: 5px ;
+}
+
+
+.layout{
+    position: relative;
+	top: 75px;
+
+}
+label {
+	display: block;
+	margin-bottom: 5px;
 }
