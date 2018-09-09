@@ -53,7 +53,7 @@ function display(arrayOfNewsItems) {
     var feed = document.getElementById('feed');
 
     arrayOfNewsItems.forEach(function(item, i) {
-        stringOfHeading = stringOfHeading + '<div class="news-item-heading"><a href="/news/?id='+ i + '">' + item.heading + '</a>' + '</div>';    
+        stringOfHeading = stringOfHeading +`<h2 class="news-item-heading"><span class="news_number">${i+1}.</span><a href="/news/?id=${i}" class="news_link">${item.heading}</a></h2>`
     });
 
     feed.innerHTML = stringOfHeading;

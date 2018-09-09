@@ -1,3 +1,7 @@
+/* Embed Font */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -57,29 +61,14 @@ table {
 .layout .leftside{
   	box-sizing: border-box;
 	display: inline-block;
-	width: 40%;
+	width: 50%;
 
 }
 .layout .rightside{
 	box-sizing: border-box;
 	display: inline-block;
-	width: 60%;
+	width: 50%;
 	}
-
-.leftside{
-	/*display: inline-block;*/
-	float: left;
-	background-color: lightblue;
-	padding: 2.5em;
-	height: calc(100vh - 99px);
-}
-
-.rightside{
-	background-color: #4286f4;
-	height: calc(100vh - 99px);
-	overflow: auto;
-	padding: 20px;
-}
 
 .heading, .description{
 	width: 100%;
@@ -112,17 +101,22 @@ img {
 }
 
 .button {
-	width: 100%;
-	background: #2874A6;
+	width: 130px;
+	background: #01564e;
 	color: white;
 	padding: 5px ;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 1.5rem;
+}
 
+.button:hover {
+	color: #01564e;
+	background-color: #fff;
+	box-sizing: border-box;
 }
 
 
@@ -154,7 +148,7 @@ footer {
 .feed
 {
 	font-size: 20px;
-	padding: 20px;
+	padding: 20px 30px;
 }
 
 .clearfix:before,
@@ -167,4 +161,97 @@ footer {
 }
 .clearfix {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+/* Right Hand Side Part */
+.rightside{
+	background-color: #b8c2c3;
+	height: calc(100vh - 99px);
+	overflow: auto;
+	padding: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.rightside_header {
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: 300;
+}
+
+.news-item-heading {
+	font-family: serif;
+	margin: 1.3rem 0;
+}
+
+.news_link {
+	color: #000;
+	text-decoration: none;
+	font-size: 1.7rem;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.1rem;
+}
+
+.news_number {
+	margin: 0 0.5rem;
+	font-size: 1.7rem;
+	font-family: 'Roboto', sans-serif;
+}
+
+.news_link:hover {
+	text-decoration: underline;
+	color: #01564e;
+}
+
+/* lefthandside */
+.leftside{
+	/*display: inline-block;*/
+	float: left;
+	background-color: lightblue;
+	padding: 2.5em;
+	height: calc(100vh - 99px);
+}
+
+.heading, .description {
+	/* border: none; */
+	border-radius: 5px;
+	font-size: 22px;
+	border-bottom: 2px solid #01564e;
+}
+
+.heading:focus, .description:focus {
+	outline: 0;
+}
+
+.description {
+	resize: none;
+	font-size: 12px;
+}
+
+/* Labels */
+label {
+	font-size: 1.5rem;
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* News Page */
+.news_item_heading, .news_item_description {
+	font-family: 'Roboto', sans-serif;
+}
+
+.news_item_heading {
+	font-size: 2.5rem;
+	width: 70%;
+	margin: 0 auto;
+	padding-top: 130px;
+}
+
+.news_item_description {
+	width: 70%;
+	margin: 2rem auto;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	word-spacing: 0.5rem;
 }
