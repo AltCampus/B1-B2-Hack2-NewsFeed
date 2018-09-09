@@ -87,6 +87,6 @@ main{
 	margin: 0 12px;
 	padding: 10px ;
 }
-.layout{
-	top: 80px;
+.layout{position: relative;
+	top: 75px;
 	padding: 5px ;
