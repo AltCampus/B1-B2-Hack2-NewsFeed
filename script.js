@@ -4,17 +4,18 @@ var savedNewsItems = localStorage.getItem('newsItems');
 // get that newsItems and parse it, convert it to array
 
 // display the content of localStorage into the preview box
+var arrayOfNewsItems = [];
+
 if (savedNewsItems) {
     var parsedItems = JSON.parse(savedNewsItems);
     display(parsedItems);
+    arrayOfNewsItems = parsedItems;
 }
 
 
 // clicking on submit button, add event listener,
 // select the add button
 var addBtn = document.getElementById('addBtn');
-
-var arrayOfNewsItems = [];
 
 // add event listnere on the addBtn
 addBtn.addEventListener('click', function(e) {
