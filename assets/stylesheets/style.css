@@ -71,7 +71,7 @@ table {
 	float: left;
 	background-color: lightblue;
 	padding: 2.5em;
-
+	height: 84vh;
 }
 .heading, .description
 {
