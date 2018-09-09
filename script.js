@@ -1,56 +1,61 @@
+// when page loads check for localStorage newsItems
+var savedNewsItems = localStorage.getItem('newsItems');
 
-var infoBtn = document.querySelector(".button input");
-var arrFeed = [];
+// get that newsItems and parse it, convert it to array
 
-// when add button is clicked 
-infoBtn.addEventListener('click', function(e){
+// display the content of localStorage into the preview box
+if (savedNewsItems) {
+    var parsedItems = JSON.parse(savedNewsItems);
+    display(parsedItems);
+}
 
-    // run a function which should add the heading and description of the input box into a new object
-    var heading = document.getElementById("heading").value;
-    var description = document.getElementById("description").value;
+
+// clicking on submit button, add event listener,
+// select the add button
+var addBtn = document.getElementById('addBtn');
+
+var arrayOfNewsItems = [];
+
+// add event listnere on the addBtn
+addBtn.addEventListener('click', function(e) {
+    // Get input value of heading and description
+    var heading = document.getElementById('heading').value;
+    var description = document.getElementById('description').value;
+
+    // make a single item using objects having two properties i.e. heading and description
     var newsItem = {
-        headingVal : heading,
-        descriptionVal : description
+        heading: heading,
+        description: description
     };
 
-    // add this newsItem object into an array of feed (means list of newsItems)
-    arrFeed.push(newsItem);
+    // add the newsItem into arrayOfNewsItems
+    arrayOfNewsItems.push(newsItem);
 
-    console.log(arrFeed);
-    
-    // display all the headings in the arrFeed to the display box 
+    // save it to the localStorage
+    localStorage.setItem('newsItems', JSON.stringify(arrayOfNewsItems));
 
-    // 1. Select the display box
-    var display = document.getElementById("feed");
-
-    // 2. loop through arrFeed
-
-
-    arrFeed.forEach(function(newsItem){
-    // add more items
-    console.log(newsItem);
-
-    
-
-    // 3. Take the heading property from single Item and store it in a variable
-    var heading = newsItem.headingVal;
-
-    var storeFeed = " ";
-
-    storeFeed.innerHTML = headingVal;
-
-    });
-    
-
-    // 4. Find the innerHTML (content) of display box
-    
-
-
-    // 5. Add the latest heading to the innerHTML of display box
-
-
+    // display
+    display(arrayOfNewsItems);
 
 });
+
+
+// expects an array
+// loops over the array 
+// builds a string of headinigs
+// displays it to preview box by innerHTML
+function display(arrayOfNewsItems) {
+    var stringOfHeading = '';
+
+    var feed = document.getElementById('feed');
+
+    arrayOfNewsItems.forEach(function(item) {
+        stringOfHeading = stringOfHeading + '<div class="news-item-heading">' + item.heading + '</div>';    
+    });
+
+    feed.innerHTML = stringOfHeading;
+}
+
 
 
 
