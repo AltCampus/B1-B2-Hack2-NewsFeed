@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+    <h1>News Item Content</h1>
+
+    <h3>Heading</h3>
+    <p>Description</p>
+
+
+    <script>
+        var savedNewsItems = localStorage.getItem('newsItems');
+
+        if(savedNewsItems) {
+            var parsedItems = JSON.parse(savedNewsItems);
+
+            let params = new URLSearchParams(document.location.search.substring(1));
+
+            var id = Number(params.get('id'));
+            
+            let h3 = document.querySelector('h3');
+            let p = document.querySelector('p');
+
+            h3.innerHTML = parsedItems[id].heading;
+            p.innerHTML  = parsedItems[id].description;
+
+        }
+    </script>
+</body>
+</html>

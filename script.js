@@ -38,6 +38,8 @@ addBtn.addEventListener('click', function(e) {
     // display
     display(arrayOfNewsItems);
 
+    document.getElementById('heading').value = "";
+    document.getElementById('description').value = "";
 });
 
 
@@ -50,8 +52,8 @@ function display(arrayOfNewsItems) {
 
     var feed = document.getElementById('feed');
 
-    arrayOfNewsItems.forEach(function(item) {
-        stringOfHeading = stringOfHeading + '<div class="news-item-heading">' + item.heading + '</div>';    
+    arrayOfNewsItems.forEach(function(item, i) {
+        stringOfHeading = stringOfHeading + '<div class="news-item-heading"><a href="/news/?id='+ i + '">' + item.heading + '</a>' + '</div>';    
     });
 
     feed.innerHTML = stringOfHeading;
