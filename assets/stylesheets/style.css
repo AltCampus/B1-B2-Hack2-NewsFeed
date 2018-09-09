@@ -130,7 +130,7 @@ img {
     position: relative;
 	/*top: 75px;*/
 	bottom: 5px;
-	z-index: -10;
+	z-index: 0;
 	top: 80px;
 
 }
@@ -153,7 +153,7 @@ footer {
 
 .feed
 {
-	font-size: 30px;
+	font-size: 20px;
 	padding: 20px;
 }
 
