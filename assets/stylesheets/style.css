@@ -96,6 +96,14 @@ main{
 	width: 100%;
 	background: blue;
 	color: white;
+<<<<<<< HEAD
 	padding: 5px ;
 
 }
+=======
+	padding: 10px ;
+}
+.layout{position: relative;
+	top: 75px;
+	padding: 5px ;
+>>>>>>> f4ecfd579eddbf33beb864d9f617c29f1760a34e
