@@ -106,11 +106,17 @@ img {
 }
 
 .button {
-	width: 40%;
-	background: blue;
+	width: 100%;
+	background: #2874A6;
 	color: white;
 	padding: 5px ;
-	float: right;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
 }
 
 
