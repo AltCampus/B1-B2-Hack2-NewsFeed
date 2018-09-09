@@ -81,10 +81,8 @@ main{
 
 }
 .button {
-
 	width: 100%;
-	background: lightblue;
+	background: blue;
 	color: white;
-	margin: 0 12px;
-	padding: 10px ;
+	padding: 5px ;
 }
